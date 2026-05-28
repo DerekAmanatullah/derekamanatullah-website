@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Team Is the Instrument — Cousins et al., JAMA Surg 2023</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#111; --ink-soft:#2c2c2c;
+    --paper:#f6f1e8; --paper-dim:#ece5d6;
+    --rule:#d9cfb9; --accent:#b22222; --teal:#2e6f6a;
+    --serif-display:"Playfair Display","Georgia",serif;
+    --serif-body:"Source Serif 4","Iowan Old Style","Georgia",serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif-body);font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .hero{position:relative;min-height:92vh;background:radial-gradient(ellipse at 30% 40%,rgba(178,34,34,.18) 0%,transparent 55%),radial-gradient(ellipse at 70% 70%,rgba(46,111,106,.18) 0%,transparent 55%),#0a0a0a;color:#f4ece0;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+  .hero-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:72px 28px}
+  .kicker{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#c87474;font-weight:600;margin-bottom:28px}
+  h1.title{font-family:var(--serif-display);font-weight:900;font-size:clamp(48px,7vw,92px);line-height:1.02;letter-spacing:-.015em;margin:0 0 24px;max-width:14ch}
+  .dek{font-style:italic;font-size:clamp(20px,2vw,26px);line-height:1.4;color:#e6dccb;max-width:38ch;margin:0 0 36px}
+  .byline{font-family:var(--sans);font-size:13px;letter-spacing:.05em;color:#b2a99a;line-height:1.7}
+  .byline strong{color:#f4ece0;font-weight:600}
+  section.chapter{padding:80px 28px;border-top:1px solid var(--rule)}
+  .chapter:nth-of-type(even){background:var(--paper-dim)}
+  .container{max-width:720px;margin:0 auto}
+  .chapter-label{font-family:var(--sans);font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+  h2{font-family:var(--serif-display);font-weight:700;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-.01em;margin:0 0 24px;max-width:18ch}
+  p{margin:0 0 18px}
+  p.lead{font-size:21px;line-height:1.5;color:var(--ink-soft)}
+  p.lead::first-letter{font-family:var(--serif-display);font-weight:900;float:left;font-size:72px;line-height:.85;padding:8px 10px 0 0;color:var(--accent)}
+  em.term{font-style:italic;color:var(--accent)}
+  strong{color:var(--ink)}
+  .stat{margin:36px auto;max-width:720px;text-align:center;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0}
+  .stat .num{font-family:var(--serif-display);font-weight:900;font-size:clamp(72px,12vw,150px);line-height:.95;color:var(--accent);letter-spacing:-.03em}
+  .stat .num.teal{color:var(--teal)}
+  .stat .cap{font-family:var(--sans);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#6b6356;margin-top:10px}
+  .stat .sub{font-style:italic;font-size:18px;color:var(--ink-soft);margin-top:14px;max-width:36ch;margin-left:auto;margin-right:auto}
+  blockquote.pull{margin:36px auto;max-width:720px;text-align:center;font-family:var(--serif-display);font-style:italic;font-size:clamp(24px,3vw,34px);line-height:1.25;padding:22px 20px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  blockquote.pull cite{display:block;margin-top:14px;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#6b6356}
+  .num-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:22px 0;text-align:center}
+  .num-row .item .n{font-family:var(--serif-display);font-weight:900;font-size:clamp(34px,5vw,54px);line-height:1;color:var(--ink)}
+  .num-row .item.r .n{color:var(--accent)} .num-row .item.t .n{color:var(--teal)}
+  .num-row .item .l{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6b6356;margin-top:8px}
+  @media (max-width:640px){.num-row{grid-template-columns:1fr}}
+  .fade{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}
+  .fade.in{opacity:1;transform:translateY(0)}
+  footer.colophon{background:#0a0a0a;color:#cdc4b3;padding:56px 28px 40px;font-family:var(--sans);font-size:14px;line-height:1.6}
+  footer .container{max-width:800px}
+  footer h4{font-family:var(--serif-display);font-weight:700;color:#f4ece0;font-size:20px;margin:0 0 8px}
+  footer a{color:#e3a87a;text-decoration:none;border-bottom:1px solid #5a3d2c}
+  .auth{font-size:12.5px;color:#948b7c;margin-top:18px;line-height:1.6}
+  .progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--accent);z-index:100;transition:width .1s linear}
+
+  /* DFA BANNER */
+  .dfa-banner{position:fixed;top:0;left:0;right:0;z-index:200;background:linear-gradient(170deg,#0F2B3C 0%,#163448 100%);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 2px 12px rgba(0,0,0,0.25);font-family:"Inter",-apple-system,sans-serif}
+  .dfa-banner a{text-decoration:none;color:rgba(255,255,255,0.85);font-size:0.78rem;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;transition:color 0.2s}
+  .dfa-banner a:hover{color:#fff}
+  .dfa-banner .home{color:rgba(255,255,255,0.85)}
+  .dfa-banner .author{font-family:"Playfair Display",Georgia,serif;font-size:0.95rem;font-weight:700;color:#fff;text-transform:none;letter-spacing:normal}
+  body{padding-top:48px}
+  .progress{top:48px !important}
+
+</style>
+</head>
+<body>
+
+<div class="dfa-banner">
+  <a href="../index.html" class="home">&larr; Heal &bull; Discover &bull; Transform</a>
+  <a href="../index.html" class="author">Derek F. Amanatullah, M.D., Ph.D.</a>
+</div>
+
+
+<div class="progress" id="progress"></div>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Stanford Orthopaedics · JAMA Surg 2023</div>
+    <h1 class="title">The team is the instrument.</h1>
+    <p class="dek">Operative efficiency is not a property of the surgeon. It is a property of the people in the room together.</p>
+    <div class="byline">
+      <strong>Cousins, … Amanatullah.</strong> &nbsp;<i>JAMA Surgery</i> 2023
+    </div>
+  </div>
+</header>
+
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 1 · The Premise</div>
+    <h2 class="fade">The surgeon is one variable. The team is the system.</h2>
+    <p class="lead fade">Surgical training treats the operator as the unit of performance. But every case happens inside a system — scrub techs, circulators, anesthesia, residents, assistants. When efficiency drops, the surgeon is blamed. When it improves, the surgeon is credited. The data say neither attribution is right.</p>
+    <blockquote class="pull fade">A consistent surgeon with an inconsistent team will produce inconsistent outcomes.<cite>— Cousins et al.</cite></blockquote>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 2 · The Method</div>
+    <h2 class="fade">Measuring the room, not just the operator.</h2>
+    <p class="fade">The team analyzed operative efficiency across a series of total joint arthroplasties, indexing each case by its <em class="term">team composition</em> — who was scrubbed, who was circulating, who was assisting — and tracking case-time variation against staffing patterns rather than against the surgeon alone.</p>
+    <div class="num-row fade">
+      <div class="item"><div class="n">Cases</div><div class="l">consecutive TJAs</div></div>
+      <div class="item r"><div class="n">Roles</div><div class="l">indexed per case</div></div>
+      <div class="item t"><div class="n">Time</div><div class="l">outcome variable</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 3 · The Finding</div>
+    <h2 class="fade">Familiar teams were faster. Strange teams were slower.</h2>
+    <p class="fade">Operative time tracked tightly with how often the people in the room had worked together. A surgeon paired with a familiar scrub-tech and a familiar circulator ran a different operation than the same surgeon paired with a rotating cast of new staff. The difference was not skill. It was <strong>rhythm</strong>.</p>
+    <div class="stat fade">
+      <div class="num teal">Rhythm</div>
+      <div class="cap">not skill</div>
+      <div class="sub">Team familiarity, not surgeon variability, drove the efficiency signal.</div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 4 · What It Means</div>
+    <h2 class="fade">Stable teams are a quality intervention.</h2>
+    <p class="fade">Hospitals optimize the operating-room schedule for throughput and labor cost, rotating staff to maximize coverage. This work argues that scheduling is itself a clinical decision. Building stable teams around high-volume surgeons is a low-cost, high-yield quality intervention. The team is not the cast. The team is the case.</p>
+    <blockquote class="pull fade">The best surgical teams are not the fastest. They are the ones that never stop communicating.<cite>— closing line</cite></blockquote>
+  </div>
+</section>
+
+<footer class="colophon">
+  <div class="container">
+    <h4>The paper</h4>
+    <p>Cousins HC et al. Assessment of team dynamics and operative efficiency in hip and knee arthroplasty. <i>JAMA Surg</i> 2023. With <strong>Amanatullah DF</strong>.</p>
+    <h4 style="margin-top:24px">Press</h4>
+    <p>Derek F. Amanatullah, MD, PhD · Stanford Orthopaedic Surgery · <a href="../index.html#contact">Connect with Dr. Amanatullah</a></p>
+    <p class="auth">All figures © the original authors.</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)} }), {threshold:.12,rootMargin:'0px 0px -10% 0px'});
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+  const bar = document.getElementById('progress');
+  const onScroll = () => { const h = document.documentElement; bar.style.width = ((h.scrollTop/(h.scrollHeight-h.clientHeight))*100).toFixed(2)+'%'; };
+  document.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+</script>
+</body>
+</html>

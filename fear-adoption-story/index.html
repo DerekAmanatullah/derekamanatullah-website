@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Fear and the Adoption of Technology in Total Hip Arthroplasty — Blumenfeld, Fitzsimmons, Goodman, Amanatullah · J Arthroplasty 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#111; --ink-soft:#2c2c2c;
+    --paper:#f4ede0; --paper-dim:#e9dfc9;
+    --rule:#cdbf9f; --accent:#a8420d; --gold:#b8893c; --teal:#2e6f6a;
+    --serif-display:"Playfair Display","Georgia",serif;
+    --serif-body:"Source Serif 4","Iowan Old Style","Georgia",serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif-body);font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+
+  /* HERO */
+  .hero{position:relative;min-height:92vh;background:radial-gradient(ellipse at 30% 40%,rgba(168,66,13,.22) 0%,transparent 55%),radial-gradient(ellipse at 70% 70%,rgba(184,137,60,.18) 0%,transparent 55%),#0a0a0a;color:#f4ece0;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.05) 0 2px,transparent 3px),radial-gradient(circle at 80% 60%,rgba(255,255,255,.04) 0 1.5px,transparent 3px),radial-gradient(circle at 50% 80%,rgba(255,255,255,.03) 0 2px,transparent 3px);background-size:240px 240px,180px 180px,320px 320px;animation:drift 60s linear infinite;pointer-events:none}
+  @keyframes drift{from{background-position:0 0,0 0,0 0}to{background-position:240px 240px,-180px 180px,320px -320px}}
+  .hero-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:72px 28px}
+  .kicker{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#d99a6a;font-weight:600;margin-bottom:28px}
+  h1.title{font-family:var(--serif-display);font-weight:900;font-size:clamp(48px,7vw,96px);line-height:1.02;letter-spacing:-.015em;margin:0 0 24px;max-width:14ch}
+  .title em{font-style:italic;color:#e8a87a}
+  .dek{font-style:italic;font-size:clamp(20px,2vw,26px);line-height:1.4;color:#e6dccb;max-width:40ch;margin:0 0 36px}
+  .byline{font-family:var(--sans);font-size:13px;letter-spacing:.05em;color:#b2a99a;line-height:1.7}
+  .byline strong{color:#f4ece0;font-weight:600}
+  .scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#b2a99a;animation:bob 2.2s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translate(-50%,0);opacity:.55}50%{transform:translate(-50%,8px);opacity:1}}
+
+  /* SECTIONS */
+  section.chapter{padding:80px 28px;border-top:1px solid var(--rule)}
+  .chapter:nth-of-type(even){background:var(--paper-dim)}
+  .container{max-width:740px;margin:0 auto}
+  .chapter-label{font-family:var(--sans);font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+  h2{font-family:var(--serif-display);font-weight:700;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-.01em;margin:0 0 24px;max-width:20ch}
+  h3{font-family:var(--serif-display);font-weight:700;font-size:clamp(22px,2.4vw,30px);line-height:1.2;margin:34px 0 14px;color:var(--accent)}
+  p{margin:0 0 18px}
+  p.lead{font-size:21px;line-height:1.5;color:var(--ink-soft)}
+  p.lead::first-letter{font-family:var(--serif-display);font-weight:900;float:left;font-size:72px;line-height:.85;padding:8px 10px 0 0;color:var(--accent)}
+  em.term{font-style:italic;color:var(--accent)}
+  strong{color:var(--ink)}
+
+  /* STAT */
+  .stat{margin:36px auto;max-width:740px;text-align:center;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0}
+  .stat .num{font-family:var(--serif-display);font-weight:900;font-size:clamp(72px,12vw,150px);line-height:.95;color:var(--accent);letter-spacing:-.03em}
+  .stat .num.teal{color:var(--teal)} .stat .num.gold{color:var(--gold)}
+  .stat .cap{font-family:var(--sans);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#6b6356;margin-top:10px}
+  .stat .sub{font-style:italic;font-size:18px;color:var(--ink-soft);margin-top:14px;max-width:38ch;margin-left:auto;margin-right:auto}
+
+  /* PULL QUOTE */
+  blockquote.pull{margin:36px auto;max-width:740px;text-align:center;font-family:var(--serif-display);font-style:italic;font-size:clamp(24px,3vw,34px);line-height:1.25;padding:22px 20px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  blockquote.pull cite{display:block;margin-top:14px;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#6b6356}
+
+  /* FIGURE */
+  figure.fig{margin:32px auto;max-width:1000px}
+  figure.fig img{width:100%;display:block;border-radius:2px;box-shadow:0 30px 60px -30px rgba(0,0,0,.25);background:#fff;padding:16px}
+  figcaption{font-family:var(--sans);font-size:13px;line-height:1.5;color:#5a5346;padding:12px 12px 0;max-width:58ch;margin:0 auto}
+  figcaption b{font-weight:600;color:var(--ink);letter-spacing:.05em;text-transform:uppercase;font-size:11px;display:block;margin-bottom:4px}
+
+  /* NUM ROW */
+  .num-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:22px 0;text-align:center}
+  .num-row .item .n{font-family:var(--serif-display);font-weight:900;font-size:clamp(34px,5vw,54px);line-height:1;color:var(--ink)}
+  .num-row .item.r .n{color:var(--accent)} .num-row .item.t .n{color:var(--teal)} .num-row .item.g .n{color:var(--gold)}
+  .num-row .item .l{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6b6356;margin-top:8px}
+  @media (max-width:640px){.num-row{grid-template-columns:1fr}}
+
+  /* FEAR LADDER — 5 phases */
+  .ladder{display:grid;grid-template-columns:1fr;gap:8px;margin:24px 0}
+  .ladder .rung{background:#fff;border-left:4px solid var(--accent);padding:14px 18px;border-radius:2px;display:grid;grid-template-columns:160px 1fr;gap:18px;align-items:baseline}
+  .ladder .rung .phase{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6b6356;font-weight:600}
+  .ladder .rung .who{font-family:var(--serif-display);font-weight:700;font-size:18px;color:var(--ink);margin-bottom:4px}
+  .ladder .rung .fear{font-style:italic;color:var(--accent);font-size:17px;line-height:1.35}
+  .ladder .rung:nth-child(2){border-color:#c25a1a}
+  .ladder .rung:nth-child(3){border-color:var(--gold)}
+  .ladder .rung:nth-child(4){border-color:#8b7a3c}
+  .ladder .rung:nth-child(5){border-color:var(--teal)}
+  @media (max-width:640px){.ladder .rung{grid-template-columns:1fr;gap:6px}.ladder .rung .phase{font-size:10px}}
+
+  /* COMPARE — HXLPE vs MoM */
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:28px 0}
+  .compare .card{background:#fff;border:1px solid var(--rule);border-radius:3px;padding:22px 20px}
+  .compare .card h4{font-family:var(--serif-display);font-weight:700;font-size:22px;margin:0 0 6px}
+  .compare .card .tag{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin-bottom:14px}
+  .compare .card.win{border-top:4px solid var(--teal)} .compare .card.win .tag{color:var(--teal)}
+  .compare .card.fail{border-top:4px solid var(--accent)} .compare .card.fail .tag{color:var(--accent)}
+  .compare .card ul{list-style:none;padding:0;margin:0;font-size:15px;line-height:1.55}
+  .compare .card li{padding:5px 0;border-bottom:1px dashed var(--rule)}
+  .compare .card li:last-child{border-bottom:none}
+  @media (max-width:640px){.compare{grid-template-columns:1fr}}
+
+  /* BULLETS */
+  ul.bul{list-style:none;padding:0;margin:0 0 22px}
+  ul.bul li{position:relative;padding:8px 0 8px 28px;font-size:19px;line-height:1.5;border-bottom:1px solid var(--rule)}
+  ul.bul li:last-child{border-bottom:none}
+  ul.bul li::before{content:"";position:absolute;left:6px;top:18px;width:10px;height:10px;background:var(--accent);border-radius:50%}
+  ul.bul li.t::before{background:var(--teal)}
+  ul.bul li.g::before{background:var(--gold)}
+  ul.bul li.k::before{background:var(--ink)}
+  ul.bul li b{font-weight:700;color:var(--ink)}
+
+  /* RRR vs ARR comparison */
+  .riskcompare{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:28px 0;background:#fff;border:1px solid var(--rule);border-radius:3px;padding:24px}
+  .riskcompare .side{text-align:center;padding:8px 12px}
+  .riskcompare .side h5{font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin:0 0 10px;color:#6b6356;font-weight:700}
+  .riskcompare .big{font-family:var(--serif-display);font-weight:900;font-size:clamp(36px,6vw,72px);line-height:1;letter-spacing:-.03em}
+  .riskcompare .side.rrr .big{color:var(--accent)}
+  .riskcompare .side.arr .big{color:var(--teal)}
+  .riskcompare .desc{font-size:14px;color:#6b6356;margin-top:8px;line-height:1.45}
+  .riskcompare .between{position:relative}
+  .riskcompare .between::before{content:"vs";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-family:var(--serif-display);font-style:italic;font-size:24px;color:#6b6356}
+
+  /* FADE */
+  .fade{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}
+  .fade.in{opacity:1;transform:translateY(0)}
+
+  /* FOOTER */
+  footer.colophon{background:#0a0a0a;color:#cdc4b3;padding:56px 28px 40px;font-family:var(--sans);font-size:14px;line-height:1.6}
+  footer .container{max-width:820px}
+  footer h4{font-family:var(--serif-display);font-weight:700;color:#f4ece0;font-size:20px;margin:0 0 8px}
+  footer a{color:#e8a87a;text-decoration:none;border-bottom:1px solid #5a3d2c}
+  .auth{font-size:12.5px;color:#948b7c;margin-top:18px;line-height:1.6}
+
+  /* PROGRESS */
+  .progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--accent);z-index:100;transition:width .1s linear}
+
+  /* DFA BANNER */
+  .dfa-banner{position:fixed;top:0;left:0;right:0;z-index:200;background:linear-gradient(170deg,#0F2B3C 0%,#163448 100%);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 2px 12px rgba(0,0,0,0.25);font-family:"Inter",-apple-system,sans-serif}
+  .dfa-banner a{text-decoration:none;color:rgba(255,255,255,0.85);font-size:0.78rem;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;transition:color 0.2s}
+  .dfa-banner a:hover{color:#fff}
+  .dfa-banner .home{color:rgba(255,255,255,0.85)}
+  .dfa-banner .author{font-family:"Playfair Display",Georgia,serif;font-size:0.95rem;font-weight:700;color:#fff;text-transform:none;letter-spacing:normal}
+  body{padding-top:48px}
+  .progress{top:48px !important}
+
+</style>
+</head>
+<body>
+
+<div class="dfa-banner">
+  <a href="../index.html" class="home">&larr; Heal &bull; Discover &bull; Transform</a>
+  <a href="../index.html" class="author">Derek F. Amanatullah, M.D., Ph.D.</a>
+</div>
+
+
+<div class="progress" id="progress"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Stanford Orthopaedics · J Arthroplasty 2025 · Commentary</div>
+    <h1 class="title">Fear is the <em>engine</em> of adoption.</h1>
+    <p class="dek">Optimism, curiosity, ambition — they get the credit. But it is anxiety that moves new technology from the lab into your operating room.</p>
+    <div class="byline">
+      <strong>Blumenfeld, Fitzsimmons, Goodman &amp; Amanatullah.</strong> &nbsp;Journal of Arthroplasty · JOA-D-25-02789
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</header>
+
+<!-- 1 · Five Fears -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 1 · Five Fears, One Curve</div>
+    <h2 class="fade">Every adopter is running on a different anxiety.</h2>
+    <p class="lead fade">The Gartner Hype Cycle and Rogers' Adoption Curve are the two maps every industry uses to predict whether a new technology will live or die. Overlay them and an under-discussed truth emerges: each adopter group is pushed onto the curve by a specific fear — and industry has learned to sell to each one.</p>
+  </div>
+  <figure class="fig fade">
+    <img src="figs/figure1.png" alt="Gartner Hype Cycle (Initial Hype → Peak of Expectations → Trough of Disillusionment → Slope of Enlightenment → Plateau of Productivity) overlaid with Rogers' Adoption Curve showing innovators, early adopters, early/late majority, and laggards." />
+    <figcaption><b>Figure 1</b>Two curves, one story. The black Gartner line tracks market visibility from technology trigger to plateau of productivity. The dotted grey line — cumulative adoption — only crosses the "Chasm of Success" if the technology survives the trough of disillusionment with real evidence behind it. Most do not.</figcaption>
+  </figure>
+  <div class="container">
+    <div class="ladder fade">
+      <div class="rung">
+        <div><div class="phase">Innovation Trigger</div><div class="who">Innovators (+2.5%)</div></div>
+        <div class="fear">Fear of <b>irrelevance</b> — motivates risk-taking with unproven tools.</div>
+      </div>
+      <div class="rung">
+        <div><div class="phase">Peak of Expectations</div><div class="who">Early Adopters (+13.5%)</div></div>
+        <div class="fear">Fear of <b>lost prestige</b> — drives bold promises and leadership signaling.</div>
+      </div>
+      <div class="rung">
+        <div><div class="phase">Trough of Disillusionment</div><div class="who">Early Majority (+34%)</div></div>
+        <div class="fear">Fear of <b>failure, loss, embarrassment</b> — triggers retreat until evidence emerges.</div>
+      </div>
+      <div class="rung">
+        <div><div class="phase">Slope of Enlightenment</div><div class="who">Late Majority (+34%)</div></div>
+        <div class="fear">Fear of <b>repeating the past</b> — demands proof, case studies, peer validation.</div>
+      </div>
+      <div class="rung">
+        <div><div class="phase">Plateau of Productivity</div><div class="who">Laggards (+16%)</div></div>
+        <div class="fear">Fear of <b>obsolescence</b> — forces adoption once alternatives vanish.</div>
+      </div>
+    </div>
+    <blockquote class="pull fade">Fear reshapes itself across phases for each adopter — acting as the constant undercurrent.<cite>— Blumenfeld et al.</cite></blockquote>
+  </div>
+</section>
+
+<!-- 2 · Two Bearings -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 2 · Two Bearings, Two Endings</div>
+    <h2 class="fade">Same hype. Same patients. Different ending.</h2>
+    <p class="fade">In the early 2000s, two technologies promised to solve the polyethylene wear problem. Both raced through innovation trigger and peak of expectations. Only one made it across the chasm.</p>
+    <div class="compare fade">
+      <div class="card win">
+        <div class="tag">Plateau of Productivity</div>
+        <h4>Highly Crosslinked Polyethylene</h4>
+        <ul>
+          <li>✓ Lab data showed dramatic wear reduction</li>
+          <li>✓ Survived early brittleness concerns</li>
+          <li>✓ Registries confirmed lower revision rates</li>
+          <li>✓ Now the worldwide standard of care</li>
+        </ul>
+      </div>
+      <div class="card fail">
+        <div class="tag">Collapsed in the Trough</div>
+        <h4>Metal-on-Metal Bearings</h4>
+        <ul>
+          <li>✗ Promised "virtually no wear" for young patients</li>
+          <li>✗ Pseudotumors, adverse local tissue reactions</li>
+          <li>✗ Elevated systemic metal ion levels</li>
+          <li>✗ Most designs withdrawn by the early 2010s</li>
+        </ul>
+      </div>
+    </div>
+    <ul class="bul fade">
+      <li class="t"><b>HXLPE survived</b> because both relative <i>and</i> absolute gains were durable.</li>
+      <li><b>MoM collapsed</b> because once registries reported absolute complication rates, the relative-risk story stopped working.</li>
+      <li class="k">The difference wasn't marketing intensity. It was whether long-term, real-world data backed the promise.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3 · Millennial patient + Five-Star FOMO + DAA -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 3 · The Millennial Patient &amp; Five-Star FOMO</div>
+    <h2 class="fade">When the patient changed, the surgeon's fear changed too.</h2>
+    <ul class="bul fade">
+      <li><b>1970s–1990s:</b> hip replacement was for older patients with end-stage rheumatoid or severe degenerative disease. Goal: pain relief.</li>
+      <li><b>2000s onward:</b> the population shifted to younger, active osteoarthritis patients who wanted to keep playing sports.</li>
+      <li>HXLPE delivered durable performance for this group — and locked higher expectations in as the new baseline.</li>
+      <li class="g">Industry calls this the <b>"millennial patient"</b> and uses it to sell every subsequent technology.</li>
+    </ul>
+
+    <h3 class="fade">Five-Star FOMO</h3>
+    <ul class="bul fade">
+      <li>Public physician star ratings are now a reputational and volume driver.</li>
+      <li>Surgeons who <b>recommend against surgery</b> — even within shared decision-making — receive lower ratings, regardless of outcome.</li>
+      <li>So the fear flips: not "did I cause harm," but "did I lose the patient."</li>
+    </ul>
+    <blockquote class="pull fade">Ratings serve as an external emotional amplifier within the adoption curve.<cite>— from the paper</cite></blockquote>
+
+    <h3 class="fade">DAA: A Case Study in Aggregate Harm</h3>
+    <ul class="bul fade">
+      <li><b>50–100 cases</b> required to reach posterior-approach complication rates.</li>
+      <li>Industry-sponsored training accelerated uptake faster than the learning curve allowed.</li>
+      <li>Femoral fracture and early loosening rates were borne by patients during the curve.</li>
+      <li class="k">Even after technique stabilized, the cumulative beneficence math is unfavorable.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 · Academic Hype -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 4 · When Academia Becomes Industry</div>
+    <h2 class="fade">"50% risk reduction" sounds transformative. Two percent to one percent does not.</h2>
+    <div class="riskcompare fade">
+      <div class="side rrr">
+        <h5>Relative Risk Reduction</h5>
+        <div class="big">50%</div>
+        <div class="desc">The marketing number. Generates excitement, urgency, fear of missing the breakthrough.</div>
+      </div>
+      <div class="side between arr">
+        <h5>Absolute Risk Reduction</h5>
+        <div class="big">1%</div>
+        <div class="desc">The same data. From a 2% baseline event rate down to 1%. Patients feel this number, not the first one.</div>
+      </div>
+    </div>
+
+    <ul class="bul fade">
+      <li><b>BMI ≥ 40 kg/m²:</b> "two-fold" higher complication rate — absolute increase often 1–2%.</li>
+      <li><b>Albumin:</b> low values flagged as strong predictors of complications — heavily confounded by frailty and comorbidities.</li>
+      <li><b>HbA1c ≥ 8.0%:</b> "doubled" infection risk justifies rigid cutoffs — absolute increase, only a few percentage points.</li>
+      <li class="k">Each threshold transformed a modest association into a hard exclusion criterion.</li>
+    </ul>
+
+    <blockquote class="pull fade">When industry sponsorship aligns with academic publications emphasizing relative benefits, the adoption curve accelerates dramatically.<cite>— Blumenfeld et al.</cite></blockquote>
+
+    <ul class="bul fade">
+      <li><b>Industry hype cycle:</b> marketing, training programs, conference sponsorship.</li>
+      <li><b>Academic hype cycle:</b> publication, citation, guideline thresholds — all amplifying relative risk.</li>
+      <li class="g">When the two align (e.g., DAA), the combined weight pushes technologies through the curve faster than evidence can correct them.</li>
+      <li>Payor-driven prior authorization adds a third force — sometimes blocking innovation, sometimes locking in premature adoption.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 5 · Robotics + way out -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 5 · Robotics, Training &amp; the Way Out</div>
+    <h2 class="fade">Robotics is the next DAA — without the early adverse event to slow it.</h2>
+    <ul class="bul fade">
+      <li>Robotic THA is currently surging along the <b>peak of expectations</b>, driven by industry, peer adoption, and marketing — not yet by robust long-term outcomes.</li>
+      <li>The driver is <b>positional FOMO</b>: institutions fear that failing to adopt means losing innovation leadership.</li>
+      <li class="k">Unlike DAA, robotics has not yet produced a direct, surgeon-attributable adverse event (fracture, nerve palsy) to trigger abandonment.</li>
+      <li>Open question: will future arthroplasty surgeons still know how to do a manual hip?</li>
+    </ul>
+
+    <h3 class="fade">Moving Forward: Knowledge is Power</h3>
+    <ul class="bul fade">
+      <li class="t">Privilege <b>absolute risk</b> over relative risk in every counseling and policy decision.</li>
+      <li class="t">Demand <b>peer-reviewed, registry-grade</b> evidence before adoption — not industry-sponsored case series.</li>
+      <li class="t">Treat lab thresholds (BMI, albumin, HbA1c) as <b>risk modifiers</b>, not algorithmic exclusions.</li>
+      <li class="t">Build training pathways that preserve manual technique alongside robotic platforms.</li>
+      <li class="g">Recognize fear when it shows up — irrelevance, prestige, embarrassment, obsolescence — and ask whether it, or the evidence, is making the call.</li>
+    </ul>
+
+    <blockquote class="pull fade">Only through awareness of and vigilance against fear can our specialty advance safely and ethically.<cite>— closing line</cite></blockquote>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="colophon">
+  <div class="container">
+    <h4>The commentary</h4>
+    <p>Blumenfeld TJ, Fitzsimmons LE, Goodman SB, <strong>Amanatullah DF</strong>. <i>Fear and the Adoption of Technology in Total Hip Arthroplasty.</i> <b>Journal of Arthroplasty</b> 2025; manuscript JOA-D-25-02789. In press.</p>
+    <h4 style="margin-top:24px">Press</h4>
+    <p>Derek F. Amanatullah, MD, PhD · Stanford Orthopaedic Surgery · <a href="../index.html#contact">Connect with Dr. Amanatullah</a></p>
+    <p class="auth">Frameworks cited: Gartner Hype Cycle (Linden &amp; Fenn, 2003); Rogers' Diffusion of Innovations (1962). Case material on DAA learning curve from Peters et al., <i>Acta Orthop</i> 2022 (n = 15,875 hips). Five-star FOMO data from Murrietta et al., <i>J Arthroplasty</i> 2025.</p>
+    <p class="auth">Storyboard built from the manuscript figures and text. Figure 1 © the original authors. Visualization design adapted from long-form scrollytelling conventions.</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)} }), {threshold:.12,rootMargin:'0px 0px -10% 0px'});
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+  const bar = document.getElementById('progress');
+  const onScroll = () => { const h = document.documentElement; bar.style.width = ((h.scrollTop/(h.scrollHeight-h.clientHeight))*100).toFixed(2)+'%'; };
+  document.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+</script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>The Infection That Hides in Plain Sight — Manasherob et al., J Transl Med 2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:#111; --ink-soft:#2c2c2c;
+    --paper:#f6f1e8; --paper-dim:#ece5d6;
+    --rule:#d9cfb9; --accent:#b22222; --teal:#2e6f6a;
+    --serif-display:"Playfair Display","Georgia",serif;
+    --serif-body:"Source Serif 4","Iowan Old Style","Georgia",serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif-body);font-size:19px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+
+  /* HERO */
+  .hero{position:relative;min-height:92vh;background:radial-gradient(ellipse at 30% 40%,rgba(178,34,34,.18) 0%,transparent 55%),radial-gradient(ellipse at 70% 70%,rgba(46,111,106,.18) 0%,transparent 55%),#0a0a0a;color:#f4ece0;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.05) 0 2px,transparent 3px),radial-gradient(circle at 80% 60%,rgba(255,255,255,.04) 0 1.5px,transparent 3px),radial-gradient(circle at 50% 80%,rgba(255,255,255,.03) 0 2px,transparent 3px);background-size:240px 240px,180px 180px,320px 320px;animation:drift 60s linear infinite;pointer-events:none}
+  @keyframes drift{from{background-position:0 0,0 0,0 0}to{background-position:240px 240px,-180px 180px,320px -320px}}
+  .hero-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:72px 28px}
+  .kicker{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#c87474;font-weight:600;margin-bottom:28px}
+  h1.title{font-family:var(--serif-display);font-weight:900;font-size:clamp(48px,7vw,92px);line-height:1.02;letter-spacing:-.015em;margin:0 0 24px;max-width:14ch}
+  .dek{font-style:italic;font-size:clamp(20px,2vw,26px);line-height:1.4;color:#e6dccb;max-width:38ch;margin:0 0 36px}
+  .byline{font-family:var(--sans);font-size:13px;letter-spacing:.05em;color:#b2a99a;line-height:1.7}
+  .byline strong{color:#f4ece0;font-weight:600}
+  .scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#b2a99a;animation:bob 2.2s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translate(-50%,0);opacity:.55}50%{transform:translate(-50%,8px);opacity:1}}
+
+  /* SECTIONS */
+  section.chapter{padding:80px 28px;border-top:1px solid var(--rule)}
+  .chapter:nth-of-type(even){background:var(--paper-dim)}
+  .container{max-width:720px;margin:0 auto}
+  .chapter-label{font-family:var(--sans);font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:14px}
+  h2{font-family:var(--serif-display);font-weight:700;font-size:clamp(32px,4vw,52px);line-height:1.1;letter-spacing:-.01em;margin:0 0 24px;max-width:18ch}
+  p{margin:0 0 18px}
+  p.lead{font-size:21px;line-height:1.5;color:var(--ink-soft)}
+  p.lead::first-letter{font-family:var(--serif-display);font-weight:900;float:left;font-size:72px;line-height:.85;padding:8px 10px 0 0;color:var(--accent)}
+  em.term{font-style:italic;color:var(--accent)}
+  strong{color:var(--ink)}
+
+  /* STAT */
+  .stat{margin:36px auto;max-width:720px;text-align:center;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:28px 0}
+  .stat .num{font-family:var(--serif-display);font-weight:900;font-size:clamp(72px,12vw,150px);line-height:.95;color:var(--accent);letter-spacing:-.03em}
+  .stat .num.teal{color:var(--teal)}
+  .stat .cap{font-family:var(--sans);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#6b6356;margin-top:10px}
+  .stat .sub{font-style:italic;font-size:18px;color:var(--ink-soft);margin-top:14px;max-width:36ch;margin-left:auto;margin-right:auto}
+
+  /* PULL QUOTE */
+  blockquote.pull{margin:36px auto;max-width:720px;text-align:center;font-family:var(--serif-display);font-style:italic;font-size:clamp(24px,3vw,34px);line-height:1.25;padding:22px 20px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+  blockquote.pull cite{display:block;margin-top:14px;font-family:var(--sans);font-style:normal;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#6b6356}
+
+  /* FIGURE */
+  figure.fig{margin:32px auto;max-width:980px}
+  figure.fig img{width:100%;display:block;border-radius:2px;box-shadow:0 30px 60px -30px rgba(0,0,0,.25);background:#fff}
+  figure.fig.narrow img{max-width:520px;margin:0 auto}
+  figcaption{font-family:var(--sans);font-size:13px;line-height:1.5;color:#5a5346;padding:12px 12px 0;max-width:58ch;margin:0 auto}
+  figcaption b{font-weight:600;color:var(--ink);letter-spacing:.05em;text-transform:uppercase;font-size:11px;display:block;margin-bottom:4px}
+
+  /* NUM ROW */
+  .num-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:22px 0;text-align:center}
+  .num-row .item .n{font-family:var(--serif-display);font-weight:900;font-size:clamp(34px,5vw,54px);line-height:1;color:var(--ink)}
+  .num-row .item.r .n{color:var(--accent)} .num-row .item.t .n{color:var(--teal)}
+  .num-row .item .l{font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#6b6356;margin-top:8px}
+
+  /* MARKERS — locked 3×3 */
+  .markers{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:8px;margin:24px 0}
+  .markers .m{background:#fff;border:1px solid var(--rule);padding:14px 8px;border-radius:3px;text-align:center;min-width:0}
+  .markers .m .name{font-family:var(--serif-display);font-weight:700;font-size:clamp(13px,1.6vw,17px);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .markers .m .desc{font-family:var(--sans);font-size:clamp(10px,1.1vw,11.5px);color:#6b6356;line-height:1.35;margin-top:3px}
+  @media (max-width:640px){.num-row{grid-template-columns:1fr}}
+
+  /* FADE */
+  .fade{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}
+  .fade.in{opacity:1;transform:translateY(0)}
+
+  /* FOOTER */
+  footer.colophon{background:#0a0a0a;color:#cdc4b3;padding:56px 28px 40px;font-family:var(--sans);font-size:14px;line-height:1.6}
+  footer .container{max-width:800px}
+  footer h4{font-family:var(--serif-display);font-weight:700;color:#f4ece0;font-size:20px;margin:0 0 8px}
+  footer a{color:#e3a87a;text-decoration:none;border-bottom:1px solid #5a3d2c}
+  .auth{font-size:12.5px;color:#948b7c;margin-top:18px;line-height:1.6}
+
+  /* PROGRESS */
+  .progress{position:fixed;top:0;left:0;height:3px;width:0%;background:var(--accent);z-index:100;transition:width .1s linear}
+
+  /* BULLETS */
+  ul.bul{list-style:none;padding:0;margin:0 0 22px}
+  ul.bul li{position:relative;padding:8px 0 8px 28px;font-size:19px;line-height:1.5;border-bottom:1px solid var(--rule)}
+  ul.bul li:last-child{border-bottom:none}
+  ul.bul li::before{content:"";position:absolute;left:6px;top:18px;width:10px;height:10px;background:var(--accent);border-radius:50%}
+  ul.bul li.t::before{background:var(--teal)}
+  ul.bul li.k::before{background:var(--ink)}
+  ul.bul li b{font-weight:700;color:var(--ink)}
+
+  /* DFA BANNER */
+  .dfa-banner{position:fixed;top:0;left:0;right:0;z-index:200;background:linear-gradient(170deg,#0F2B3C 0%,#163448 100%);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 2px 12px rgba(0,0,0,0.25);font-family:"Inter",-apple-system,sans-serif}
+  .dfa-banner a{text-decoration:none;color:rgba(255,255,255,0.85);font-size:0.78rem;font-weight:600;letter-spacing:0.8px;text-transform:uppercase;transition:color 0.2s}
+  .dfa-banner a:hover{color:#fff}
+  .dfa-banner .home{color:rgba(255,255,255,0.85)}
+  .dfa-banner .author{font-family:"Playfair Display",Georgia,serif;font-size:0.95rem;font-weight:700;color:#fff;text-transform:none;letter-spacing:normal}
+  body{padding-top:48px}
+  .progress{top:48px !important}
+
+</style>
+</head>
+<body>
+
+<div class="dfa-banner">
+  <a href="../index.html" class="home">&larr; Heal &bull; Discover &bull; Transform</a>
+  <a href="../index.html" class="author">Derek F. Amanatullah, M.D., Ph.D.</a>
+</div>
+
+
+<div class="progress" id="progress"></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Stanford Orthopaedics · J Transl Med 2025</div>
+    <h1 class="title">The infection that hides in plain sight.</h1>
+    <p class="dek">The blood tests said the joint was clean. The synovial fluid said otherwise — in 96 proteins.</p>
+    <div class="byline">
+      <strong>Manasherob, Warren, … Amanatullah.</strong> &nbsp;DOI: <a href="https://doi.org/10.1186/s12967-025-07425-y" style="color:#e3a87a">10.1186/s12967-025-07425-y</a>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll</div>
+</header>
+
+<!-- 1 · Problem -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 1 · The Problem</div>
+    <h2 class="fade">Today's infection tests only catch a fight.</h2>
+    <ul class="bul fade">
+      <li><b>ESR, CRP, synovial WBC</b> — all measure one thing: the neutrophil response.</li>
+      <li>No neutrophils, no diagnosis — even when bacteria are still there.</li>
+      <li>Biofilm bacteria specialize in <b>not</b> provoking neutrophils.</li>
+      <li>Persisters and small-colony variants survive antibiotics and dodge phagocytosis.</li>
+    </ul>
+    <div class="num-row fade">
+      <div class="item"><div class="n">3.6M</div><div class="l">joint replacements / yr</div></div>
+      <div class="item r"><div class="n">~72K</div><div class="l">overt infections</div></div>
+      <div class="item t"><div class="n">~327K</div><div class="l">estimated <i>dormant</i></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · Finding -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 2 · The Finding</div>
+    <h2 class="fade">The "cleared" joints looked just like the infected ones.</h2>
+    <ul class="bul fade">
+      <li><b>30 patients</b> · synovial fluid + plasma · 96 proteins (Olink).</li>
+      <li>3 groups: <b>7 active</b>, <b>11 MSIS-cleared after prior infection</b>, <b>12 aseptic</b>.</li>
+      <li>Unsupervised clustering: prior infections grouped with <b>active</b>, not aseptic.</li>
+      <li>Plasma could not tell the groups apart — the signal lives in the joint.</li>
+    </ul>
+    <div class="stat fade">
+      <div class="num">73%</div>
+      <div class="cap">of MSIS-cleared joints</div>
+      <div class="sub">clustered with active infections — despite normal ESR, CRP, neutrophils.</div>
+    </div>
+  </div>
+  <figure class="fig fade">
+    <img src="figs/embed_p08_1.png" alt="Heatmap and PCA showing prior infections cluster with active infections." />
+    <figcaption><b>Figure 3</b>Prior infections (green) cluster with actively septic joints (red), not the truly uninfected (blue).</figcaption>
+  </figure>
+</section>
+
+<!-- 3 · Signal + Panel -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 3 · The Signal &amp; The Panel</div>
+    <h2 class="fade">CXCL5 keeps calling. Nine proteins call dormancy.</h2>
+    <ul class="bul fade">
+      <li><b>CXCL5</b> — neutrophil chemokine — elevated 5-fold in dormant joints.</li>
+      <li>Same 5-fold elevation as in active infections.</li>
+      <li>Yet neutrophils never arrive: chemokine on, receivers off.</li>
+      <li>9-protein synovial panel separates dormant from aseptic:</li>
+    </ul>
+    <div class="markers fade">
+      <div class="m"><div class="name">CXCL5</div><div class="desc">neutrophil chemokine</div></div>
+      <div class="m"><div class="name">PDGF-B</div><div class="desc">platelet-derived GF</div></div>
+      <div class="m"><div class="name">CXCL11</div><div class="desc">T-cell chemokine</div></div>
+      <div class="m"><div class="name">MCP-2 (CCL8)</div><div class="desc">monocyte chemoattractant</div></div>
+      <div class="m"><div class="name">ANGPT1</div><div class="desc">endothelial stabilizer</div></div>
+      <div class="m"><div class="name">TIE2</div><div class="desc">ANGPT1 receptor</div></div>
+      <div class="m"><div class="name">EGF</div><div class="desc">epithelial GF</div></div>
+      <div class="m"><div class="name">NOS3</div><div class="desc">endothelial NOS</div></div>
+      <div class="m"><div class="name">Gal-1</div><div class="desc">tolerogenic lectin ↓</div></div>
+    </div>
+    <div class="num-row fade">
+      <div class="item"><div class="n">100%</div><div class="l">specificity</div></div>
+      <div class="item"><div class="n">100%</div><div class="l">PPV</div></div>
+      <div class="item t"><div class="n">0%</div><div class="l">3-yr relapse if panel-negative</div></div>
+    </div>
+    <ul class="bul fade">
+      <li class="t">14 panel-negative joints → <b>0 relapses</b> in 3 years.</li>
+      <li>Panel-positive joints → <b>22% relapsed</b>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4 · Mechanism -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 4 · The Mechanism</div>
+    <h2 class="fade">The same trick cancer uses — and a new map.</h2>
+    <ul class="bul fade">
+      <li>Up: wound healing, viral-process, granulocyte activation programs.</li>
+      <li>Down: T-cell selection and proliferation.</li>
+      <li>ANGPT1/TIE2, PDGF-B, EGF, NOS3 stabilize the endothelium → neutrophils stay in the bloodstream.</li>
+      <li>Peripheral immune tolerance — borrowed from chronic viruses and solid tumors.</li>
+    </ul>
+
+    <h3 class="fade" style="font-size:clamp(22px,2.4vw,30px);margin-top:36px;color:var(--accent)">The cancer parallel</h3>
+    <ul class="bul fade">
+      <li><b>Cancer stem cells</b> build immunosuppressive microenvironments to evade clearance. <b>Biofilm bacteria</b> appear to do the same.</li>
+      <li><b>CXCL5</b> in tumors activates CXCR2, recruits pro-tumor immune cells, and drives angiogenesis — high CXCL5 predicts worse survival in glioblastoma.</li>
+      <li>In dormant joints, the same CXCL5-anchored circuit may help bacteria remodel tissue into a survival niche.</li>
+      <li><b>Galectin-1 ↓</b> in dormant joints mirrors the immune-suppressive lectin axis exploited by many tumors.</li>
+      <li>Pathways up-regulated in dormancy (negative regulation of cytokine production, endothelial apoptosis, immune response) read like a tumor microenvironment signature.</li>
+      <li><b>Therapeutic implication:</b> immune-checkpoint and chemokine-axis drugs developed for oncology (PD-L1 inhibitors, CXCL5/CXCR2 antagonists like SB225002 / AZD-8309, ANGPT1/TIE2 modulators like AKB-9778) may be repurposable for dormant infection.</li>
+    </ul>
+    <blockquote class="pull fade">An immune truce between host and microbe — neither eradicating the bacteria nor allowing full inflammatory resolution.<cite>— from the Discussion</cite></blockquote>
+  </div>
+  <figure class="fig fade">
+    <img src="figs/embed_p12_0.png" alt="Microenvironment of dormant infection." />
+    <figcaption><b>Figure 8</b>Biofilm bacteria lock the vascular barrier shut. CXCL5 calls; no one can come.</figcaption>
+  </figure>
+  <figure class="fig fade">
+    <img src="figs/embed_p11_0.png" alt="Old vs new infection paradigm: dormant infection as a third state." />
+    <figcaption><b>Figure 7</b>Neutrophil-based criteria force a binary. Monocyte/endothelial criteria reveal a third state.</figcaption>
+  </figure>
+</section>
+
+<!-- 5 · Implications -->
+<section class="chapter">
+  <div class="container">
+    <div class="chapter-label fade">Chapter 5 · What It Means</div>
+    <h2 class="fade">Hundreds of thousands of hidden infections, every year.</h2>
+    <div class="num-row fade">
+      <div class="item t"><div class="n">~327K</div><div class="l">dormant infections / yr</div></div>
+      <div class="item"><div class="n">13–16K</div><div class="l">preventable relapses</div></div>
+      <div class="item r"><div class="n">$152–187M</div><div class="l">avoidable cost</div></div>
+    </div>
+    <ul class="bul fade">
+      <li class="t"><b>Panel-negative</b> → confident re-implantation.</li>
+      <li><b>Panel-positive</b> → longer antibiotics, more aggressive debridement, delayed re-implantation.</li>
+      <li>Therapeutic targets: CXCL5/CXCR2, ANGPT1/TIE2, PD-L1 — oncology playbook.</li>
+      <li class="k"><i>Caveats: pilot, n = 30, single center, sensitivity 22% (rule-out test). Validation is next.</i></li>
+    </ul>
+    <blockquote class="pull fade">An unseen threat becomes the next target for precision infection management.<cite>— closing line</cite></blockquote>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="colophon">
+  <div class="container">
+    <h4>The paper</h4>
+    <p>Manasherob R, Warren SI, Flanagan CM, Arora P, Heo L, Moore CJ, Chow SKH, Otieno-Ayayo ZN, Furukawa D, Maloney WJ, Lowenberg DW, Goodman SB, <strong>Amanatullah DF</strong>. <i>J Transl Med</i> 2025;23:1392. &nbsp;<a href="https://doi.org/10.1186/s12967-025-07425-y">DOI</a></p>
+    <h4 style="margin-top:24px">Press</h4>
+    <p>Derek F. Amanatullah, MD, PhD · Stanford Orthopaedic Surgery · <a href="../index.html#contact">Connect with Dr. Amanatullah</a></p>
+    <p class="auth">Patent pending: US 63/677,070; PCT-US25/039107. IRB-approved (Stanford #4328 / #54462 / #72855). All figures © the original authors under CC-BY 4.0.</p>
+  </div>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)} }), {threshold:.12,rootMargin:'0px 0px -10% 0px'});
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+  const bar = document.getElementById('progress');
+  const onScroll = () => { const h = document.documentElement; bar.style.width = ((h.scrollTop/(h.scrollHeight-h.clientHeight))*100).toFixed(2)+'%'; };
+  document.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+</script>
+</body>
+</html>
