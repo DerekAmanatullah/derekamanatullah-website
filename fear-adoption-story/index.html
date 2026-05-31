@@ -26,7 +26,7 @@
   .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(circle at 20% 30%,rgba(255,255,255,.05) 0 2px,transparent 3px),radial-gradient(circle at 80% 60%,rgba(255,255,255,.04) 0 1.5px,transparent 3px),radial-gradient(circle at 50% 80%,rgba(255,255,255,.03) 0 2px,transparent 3px);background-size:240px 240px,180px 180px,320px 320px;animation:drift 60s linear infinite;pointer-events:none}
   @keyframes drift{from{background-position:0 0,0 0,0 0}to{background-position:240px 240px,-180px 180px,320px -320px}}
   .hero-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:72px 28px}
-  .kicker{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#d99a6a;font-weight:600;margin-bottom:28px}
+  .kicker{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#c87474;font-weight:600;margin-bottom:28px}
   h1.title{font-family:var(--serif-display);font-weight:900;font-size:clamp(48px,7vw,96px);line-height:1.02;letter-spacing:-.015em;margin:0 0 24px;max-width:14ch}
   .title em{font-style:italic;color:#e8a87a}
   .dek{font-style:italic;font-size:clamp(20px,2vw,26px);line-height:1.4;color:#e6dccb;max-width:40ch;margin:0 0 36px}
@@ -350,9 +350,10 @@
 body.embedded{padding-top:0;overflow-x:hidden}
 body.embedded .dfa-banner{display:none}
 body.embedded .progress{top:0 !important}
-body.embedded .hero{justify-content:center;min-height:0;height:100vh;padding-bottom:32px}
+body.embedded .hero{justify-content:flex-start;min-height:0;height:100vh;padding-top:44px;padding-bottom:32px}
 body.embedded .hero-inner{padding-top:0;padding-bottom:0}
 body.embedded .scroll-cue{bottom:28px}
+@media (min-width:450px){body.embedded .kicker{font-size:18px}}
 </style>
 <script>if(window.self!==window.top){document.body.classList.add('embedded');}</script>
 </body>
