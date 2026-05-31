@@ -27,6 +27,8 @@
   .dek{font-style:italic;font-size:clamp(20px,2vw,26px);line-height:1.4;color:#e6dccb;max-width:38ch;margin:0 0 36px}
   .byline{font-family:var(--sans);font-size:13px;letter-spacing:.05em;color:#b2a99a;line-height:1.7}
   .byline strong{color:#f4ece0;font-weight:600}
+  .scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#b2a99a;animation:bob 2.2s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translate(-50%,0);opacity:.55}50%{transform:translate(-50%,8px);opacity:1}}
   section.chapter{padding:80px 28px;border-top:1px solid var(--rule)}
   .chapter:nth-of-type(even){background:var(--paper-dim)}
   .container{max-width:720px;margin:0 auto}
@@ -88,6 +90,7 @@
       <strong>Murasko.</strong> &nbsp;<i>Orthopedics</i> 2022
     </div>
   </div>
+  <div class="scroll-cue">Scroll</div>
 </header>
 
 <section class="chapter">
