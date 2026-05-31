@@ -25,7 +25,7 @@
   .kicker{font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#c87474;font-weight:600;margin-bottom:28px}
   h1.title{font-family:var(--serif-display);font-weight:900;font-size:clamp(48px,7vw,92px);line-height:1.02;letter-spacing:-.015em;margin:0 0 24px;max-width:14ch}
   .dek{font-style:italic;font-size:clamp(20px,2vw,26px);line-height:1.4;color:#e6dccb;max-width:38ch;margin:0 0 36px}
-  .byline{font-family:var(--sans);font-size:13px;letter-spacing:.05em;color:#b2a99a;line-height:1.7}
+  .byline{font-family:var(--sans);font-size:13px;letter-spacing:.05em;color:#b2a99a;line-height:1.7;white-space:nowrap}
   .byline strong{color:#f4ece0;font-weight:600}
   .scroll-cue{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#b2a99a;animation:bob 2.2s ease-in-out infinite}
   @keyframes bob{0%,100%{transform:translate(-50%,0);opacity:.55}50%{transform:translate(-50%,8px);opacity:1}}
@@ -83,7 +83,6 @@
 
 <header class="hero">
   <div class="hero-inner">
-    <div class="kicker">Stanford Orthopaedics · CORR 2023</div>
     <h1 class="title">It was never the weight.</h1>
     <p class="dek">BMI cutoffs deny surgery to the patients who need it most. The real driver of complications is something else entirely.</p>
     <div class="byline">
