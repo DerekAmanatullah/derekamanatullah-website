@@ -291,8 +291,9 @@
 
 
         /* LANES OF IMPACT */
-        .lanes-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
+        .lanes-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
         .lane-card {
+            flex: 0 0 calc((100% - 4rem) / 5);
             background: rgba(255,255,255,0.08);
             border: 1px solid rgba(255,255,255,0.12);
             border-radius: 10px;
@@ -314,15 +315,16 @@
             background: #f6f1e8; margin-top: 0.3rem;
         }
         @media (max-width: 1200px) {
-            .lanes-grid { grid-template-columns: repeat(3, 1fr); }
+            .lane-card { flex-basis: calc((100% - 2rem) / 3); }
         }
         @media (max-width: 900px) {
-            .lanes-grid { grid-template-columns: repeat(2, 1fr); }
+            .lane-card { flex-basis: calc((100% - 1rem) / 2); }
             .lane-quote { min-height: auto; }
         }
         @media (max-width: 600px) {
-            .lanes-grid { grid-template-columns: 1fr; gap: 1.2rem; }
-            .lane-iframe-wrap { height: 280px; }
+            .lanes-grid { gap: 1.2rem; }
+            .lane-card { flex-basis: 100%; }
+            .lane-iframe-wrap { height: 264px; }
             .lane-quote { min-height: auto; font-size: 0.95rem; }
         }
 
@@ -330,7 +332,8 @@
             .hero-top { flex-direction: column; align-items: center; text-align: center; }
             .hero-right { text-align: center; }
             .hero-tagline { margin: 0 auto 0.8rem; }
-            .accolades { display: grid; grid-template-columns: repeat(10, 1fr); gap: 0.5rem 0.4rem; justify-items: center; }
+            .accolades { display: flex; flex-wrap: wrap; justify-content: center !important; gap: 0.6rem 0.4rem; }
+            .accolades .logo-wrap { flex: 0 0 auto; width: calc((100% - 9 * 0.4rem) / 10); justify-content: center; }
             .mini-stats { justify-content: center; }
             .hero-sidebar { flex-direction: column; gap: 1rem; }
             .training-row { justify-content: center; }
@@ -350,6 +353,7 @@
             }
             .nav-toggle { display: flex; }
             .contact-row { flex-direction: column; gap: 1.2rem; align-items: center; }
+            .contact-row .c-item { width: 100%; }
             .train-item img { width: 18px; height: 18px; }
             .nav-logo { font-size: 0.82rem; }
         }
@@ -434,7 +438,7 @@
             <div class="lane-card">
                 <span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-light);">Infection</span>
                 <span class="lane-quote">&ldquo;What if the infection was never gone, just hiding where we stop looking?&rdquo;</span>
-                <div class="lane-iframe-wrap"><div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to bottom, transparent 0%, #0F2B3C 100%);pointer-events:none;z-index:2;"></div>
+                <div class="lane-iframe-wrap"><div style="position:absolute;bottom:0;left:0;right:0;height:74px;background:linear-gradient(to bottom, transparent 0%, #0F2B3C 100%);pointer-events:none;z-index:2;"></div>
                   <iframe src="dormant-infection-story/index.html" style="width:200%;height:200%;border:0;transform:scale(0.5);transform-origin:0 0;" title="The infection that hides in plain sight" scrolling="yes"></iframe>
                 </div>
                 <a href="dormant-infection-story/index.html" target="_blank" style="font-size:0.65rem;color:var(--accent-light);text-decoration:none;text-align:right;">Open full story &rarr;</a>
@@ -445,7 +449,7 @@
             <div class="lane-card">
                 <span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-light);">Equity</span>
                 <span class="lane-quote">&ldquo;The problem is not the patient&rsquo;s weight. The problem is how long the surgery takes.&rdquo;</span>
-                <div class="lane-iframe-wrap"><div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to bottom, transparent 0%, #0F2B3C 100%);pointer-events:none;z-index:2;"></div>
+                <div class="lane-iframe-wrap"><div style="position:absolute;bottom:0;left:0;right:0;height:74px;background:linear-gradient(to bottom, transparent 0%, #0F2B3C 100%);pointer-events:none;z-index:2;"></div>
                   <iframe src="equity-obesity-story/index.html" style="width:200%;height:200%;border:0;transform:scale(0.5);transform-origin:0 0;" title="It was never the weight" scrolling="yes"></iframe>
                 </div>
                 <a href="equity-obesity-story/index.html" target="_blank" style="font-size:0.65rem;color:var(--accent-light);text-decoration:none;text-align:right;">Open full story &rarr;</a>
@@ -456,7 +460,7 @@
             <div class="lane-card">
                 <span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-light);">Innovation</span>
                 <span class="lane-quote">&ldquo;Surgeons do not adopt technology because it works. They adopt it because they are afraid of being left behind.&rdquo;</span>
-                <div class="lane-iframe-wrap"><div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to bottom, transparent 0%, #0F2B3C 100%);pointer-events:none;z-index:2;"></div>
+                <div class="lane-iframe-wrap"><div style="position:absolute;bottom:0;left:0;right:0;height:74px;background:linear-gradient(to bottom, transparent 0%, #0F2B3C 100%);pointer-events:none;z-index:2;"></div>
                   <iframe src="fear-adoption-story/index.html" style="width:200%;height:200%;border:0;transform:scale(0.5);transform-origin:0 0;" title="Fear and the adoption of technology" scrolling="yes"></iframe>
                 </div>
                 <a href="fear-adoption-story/index.html" target="_blank" style="font-size:0.65rem;color:var(--accent-light);text-decoration:none;text-align:right;">Open full story &rarr;</a>
@@ -467,7 +471,7 @@
             <div class="lane-card">
                 <span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-light);">Teams</span>
                 <span class="lane-quote">&ldquo;The best surgical teams are not the fastest. They are the ones that never stop communicating.&rdquo;</span>
-                <div class="lane-iframe-wrap"><div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to bottom, transparent 0%, #0F2B3C 100%);pointer-events:none;z-index:2;"></div>
+                <div class="lane-iframe-wrap"><div style="position:absolute;bottom:0;left:0;right:0;height:74px;background:linear-gradient(to bottom, transparent 0%, #0F2B3C 100%);pointer-events:none;z-index:2;"></div>
                   <iframe src="team-dynamics-story/index.html" style="width:200%;height:200%;border:0;transform:scale(0.5);transform-origin:0 0;" title="What the OR was actually saying" scrolling="yes"></iframe>
                 </div>
                 <a href="team-dynamics-story/index.html" target="_blank" style="font-size:0.65rem;color:var(--accent-light);text-decoration:none;text-align:right;">Open full story &rarr;</a>
@@ -478,7 +482,7 @@
             <div class="lane-card">
                 <span style="font-size:0.6rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent-light);">Quality</span>
                 <span class="lane-quote">&ldquo;A satisfied patient is not the same as a well-treated patient.&rdquo;</span>
-                <div class="lane-iframe-wrap"><div style="position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(to bottom, transparent 0%, #0F2B3C 100%);pointer-events:none;z-index:2;"></div>
+                <div class="lane-iframe-wrap"><div style="position:absolute;bottom:0;left:0;right:0;height:74px;background:linear-gradient(to bottom, transparent 0%, #0F2B3C 100%);pointer-events:none;z-index:2;"></div>
                   <iframe src="satisfaction-metric-story/index.html" style="width:200%;height:200%;border:0;transform:scale(0.5);transform-origin:0 0;" title="A smile is not a cure" scrolling="yes"></iframe>
                 </div>
                 <a href="satisfaction-metric-story/index.html" target="_blank" style="font-size:0.65rem;color:var(--accent-light);text-decoration:none;text-align:right;">Open full story &rarr;</a>
