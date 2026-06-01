@@ -156,8 +156,21 @@
         .stat-bar { background: var(--white); padding: 1.2rem 2rem; }
         .stat-bar-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-around; gap: 1.5rem; flex-wrap: wrap; }
         .stat-item { text-align: center; }
-        .stat-item .num { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--primary); line-height: 1; }
-        .stat-item .lbl { font-size: 0.68rem; color: var(--gray-500); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.2rem; }
+        .stat-item .num { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; color: var(--primary); line-height: 1; }
+        .stat-item .lbl { font-size: 0.76rem; color: var(--gray-500); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.2rem; }
+        /* ABOUT / BIO */
+        .bio-section { background: var(--white); padding: 2.5rem 2rem; }
+        .bio-inner { max-width: 1100px; margin: 0 auto; }
+        .bio-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+        .bio-name { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--primary); font-weight: 700; margin-bottom: 0.6rem; }
+        .bio-lead { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; max-width: 900px; margin-bottom: 1.6rem; }
+        .bio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.6rem; margin-bottom: 1.5rem; }
+        .bio-col h4 { font-size: 0.66rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem; }
+        .bio-col ul { list-style: none; padding: 0; }
+        .bio-col li { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; margin-bottom: 0.35rem; }
+        .bio-pub-link { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.88rem; font-weight: 600; color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+        .bio-pub-link:hover { border-color: var(--accent); }
+        @media (max-width: 760px) { .bio-grid { grid-template-columns: 1fr; } }
         /* MINI STATS — inline with text */
         .mini-stats {
             display: flex; gap: 1rem; flex-wrap: wrap;
@@ -404,6 +417,45 @@
             <div class="stat-item"><div class="num" data-target="5">0</div><div class="lbl">Companies</div></div>
         </div>
     </div>
+
+    <!-- ABOUT -->
+    <section class="bio-section">
+        <div class="bio-inner">
+            <div class="bio-eyebrow">About</div>
+            <h2 class="bio-name">Derek F. Amanatullah, MD, PhD</h2>
+            <p class="bio-lead">Dr. Amanatullah is an Associate Professor of Orthopaedic Surgery at Stanford University and Editor-in-Chief of the <em>Journal of Bone and Joint Infection</em>. A fellowship-trained adult reconstruction surgeon, physician-scientist, and inventor, he cares for patients with complex hip and knee disease while leading research on implant-associated infection and founding companies that turn problems at the bedside into surgical tools.</p>
+            <div class="bio-grid">
+                <div class="bio-col">
+                    <h4>Titles</h4>
+                    <ul>
+                        <li>Associate Professor of Orthopaedic Surgery, Stanford University</li>
+                        <li>Editor-in-Chief, Journal of Bone and Joint Infection</li>
+                        <li>Director, Adult Lower Extremity Reconstruction</li>
+                    </ul>
+                </div>
+                <div class="bio-col">
+                    <h4>Training</h4>
+                    <ul>
+                        <li>BS, Biomedical Engineering &mdash; USC</li>
+                        <li>MD/PhD, Medical Scientist Training Program &mdash; Albert Einstein College of Medicine</li>
+                        <li>Residency, Orthopaedic Surgery &mdash; UC Davis</li>
+                        <li>Fellowship, Adult Reconstruction &mdash; Mayo Clinic</li>
+                        <li>Fellowship, BioDesign &mdash; Stanford University</li>
+                    </ul>
+                </div>
+                <div class="bio-col">
+                    <h4>Certification</h4>
+                    <ul>
+                        <li>Board Certified, American Board of Orthopaedic Surgery</li>
+                        <li>Fellow, American Academy of Orthopaedic Surgeons</li>
+                        <li>Fellow, American Orthopaedic Association</li>
+                        <li>Member, The Knee Society</li>
+                    </ul>
+                </div>
+            </div>
+            <a class="bio-pub-link" href="publications.html">View the complete list of publications &rarr;</a>
+        </div>
+    </section>
     <section style="background: var(--white); padding: 1.5rem 2rem; overflow: visible;">
         <div style="max-width: 1100px; margin: 0 auto;">
             <div class="accolades" style="justify-content: space-evenly;">
