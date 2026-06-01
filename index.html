@@ -94,6 +94,13 @@
             line-height: 1.75; margin-bottom: 1rem;
         }
         .hero-tagline em { font-style: italic; color: rgba(255,255,255,0.65); }
+        .hero-creds { margin-top: 1.8rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .hero-creds .hc h4 { font-size: 0.62rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--accent-light); margin-bottom: 0.45rem; }
+        .hero-creds .hc ul { list-style: none; padding: 0; margin: 0; }
+        .hero-creds .hc li { font-size: 0.76rem; color: rgba(255,255,255,0.7); line-height: 1.45; margin-bottom: 0.3rem; }
+        .hero-pub-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.3rem; font-size: 0.86rem; font-weight: 600; color: var(--accent-light); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+        .hero-pub-link:hover { border-color: var(--accent-light); }
+        @media (max-width: 760px) { .hero-creds { grid-template-columns: 1fr; gap: 1.1rem; } }
         .hero-sidebar {
             display: flex; gap: 1.5rem; flex-wrap: wrap;
         }
@@ -403,6 +410,36 @@
                 <p class="hero-tagline">As an Associate Professor of Orthopaedic Surgery at Stanford University, I bring together engineering, science, surgery, and entrepreneurship to improve the lives of patients undergoing joint replacement surgery. My work spans unmasking hidden infections to building AI tools that make the operating room safer. I believe the best ideas start at the bedside, and I am driven by those ideas to make care better for every patient.</p>
             </div>
         </div>
+        <div class="hero-creds">
+            <div class="hc">
+                <h4>Titles</h4>
+                <ul>
+                    <li>Associate Professor of Orthopaedic Surgery, Stanford University</li>
+                    <li>Editor-in-Chief, Journal of Bone and Joint Infection</li>
+                    <li>Director, Adult Lower Extremity Reconstruction</li>
+                </ul>
+            </div>
+            <div class="hc">
+                <h4>Training</h4>
+                <ul>
+                    <li>BS in Biomedical Engineering, USC</li>
+                    <li>MD/PhD, Medical Scientist Training Program, Albert Einstein College of Medicine</li>
+                    <li>Residency in Orthopaedic Surgery, UC Davis</li>
+                    <li>Fellowship in Adult Reconstruction, Mayo Clinic</li>
+                    <li>Fellowship in BioDesign, Stanford University</li>
+                </ul>
+            </div>
+            <div class="hc">
+                <h4>Certification</h4>
+                <ul>
+                    <li>Board Certified, American Board of Orthopaedic Surgery</li>
+                    <li>Fellow, American Academy of Orthopaedic Surgeons</li>
+                    <li>Fellow, American Orthopaedic Association</li>
+                    <li>Member, The Knee Society</li>
+                </ul>
+            </div>
+        </div>
+        <a class="hero-pub-link" href="publications.html">View the complete list of publications &rarr;</a>
     </div>
     </section>
 
@@ -418,44 +455,6 @@
         </div>
     </div>
 
-    <!-- ABOUT -->
-    <section class="bio-section">
-        <div class="bio-inner">
-            <div class="bio-eyebrow">About</div>
-            <h2 class="bio-name">Derek F. Amanatullah, MD, PhD</h2>
-            <p class="bio-lead">Dr. Amanatullah is an Associate Professor of Orthopaedic Surgery at Stanford University and Editor-in-Chief of the <em>Journal of Bone and Joint Infection</em>. A fellowship-trained adult reconstruction surgeon, physician-scientist, and inventor, he cares for patients with complex hip and knee disease while leading research on implant-associated infection and founding companies that turn problems at the bedside into surgical tools.</p>
-            <div class="bio-grid">
-                <div class="bio-col">
-                    <h4>Titles</h4>
-                    <ul>
-                        <li>Associate Professor of Orthopaedic Surgery, Stanford University</li>
-                        <li>Editor-in-Chief, Journal of Bone and Joint Infection</li>
-                        <li>Director, Adult Lower Extremity Reconstruction</li>
-                    </ul>
-                </div>
-                <div class="bio-col">
-                    <h4>Training</h4>
-                    <ul>
-                        <li>BS, Biomedical Engineering &mdash; USC</li>
-                        <li>MD/PhD, Medical Scientist Training Program &mdash; Albert Einstein College of Medicine</li>
-                        <li>Residency, Orthopaedic Surgery &mdash; UC Davis</li>
-                        <li>Fellowship, Adult Reconstruction &mdash; Mayo Clinic</li>
-                        <li>Fellowship, BioDesign &mdash; Stanford University</li>
-                    </ul>
-                </div>
-                <div class="bio-col">
-                    <h4>Certification</h4>
-                    <ul>
-                        <li>Board Certified, American Board of Orthopaedic Surgery</li>
-                        <li>Fellow, American Academy of Orthopaedic Surgeons</li>
-                        <li>Fellow, American Orthopaedic Association</li>
-                        <li>Member, The Knee Society</li>
-                    </ul>
-                </div>
-            </div>
-            <a class="bio-pub-link" href="publications.html">View the complete list of publications &rarr;</a>
-        </div>
-    </section>
     <section style="background: var(--white); padding: 1.5rem 2rem; overflow: visible;">
         <div style="max-width: 1100px; margin: 0 auto;">
             <div class="accolades" style="justify-content: space-evenly;">
