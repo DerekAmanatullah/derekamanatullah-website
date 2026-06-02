@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 50 600 340" font-family="Inter, Helvetica, Arial, sans-serif">
+  <defs>
+    <style>
+      .axis-label { font-size: 16px; fill: #3D4F66; font-weight: 500; }
+      .axis-title { font-size: 18px; fill: #0F1A2A; font-weight: 600; }
+      .legend-text { font-size: 14px; fill: #3D4F66; }
+      .grid-line { stroke: #D5D9E0; stroke-width: 1; stroke-dasharray: 6,4; }
+      .tick-label { font-size: 13px; fill: #7A8494; }
+    </style>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="500" fill="#F8F9FB" rx="8"/>
+  
+  <!-- Chart area -->
+  <g transform="translate(90, 40)">
+    <!-- Grid lines horizontal -->
+    <line x1="0" y1="360" x2="580" y2="360" class="grid-line"/>
+    <line x1="0" y1="288" x2="580" y2="288" class="grid-line"/>
+    <line x1="0" y1="216" x2="580" y2="216" class="grid-line"/>
+    <line x1="0" y1="144" x2="580" y2="144" class="grid-line"/>
+    <line x1="0" y1="72" x2="580" y2="72" class="grid-line"/>
+    <line x1="0" y1="0" x2="580" y2="0" class="grid-line"/>
+    
+    <!-- Grid lines vertical -->
+    <line x1="0" y1="0" x2="0" y2="360" class="grid-line"/>
+    <line x1="116" y1="0" x2="116" y2="360" class="grid-line"/>
+    <line x1="232" y1="0" x2="232" y2="360" class="grid-line"/>
+    <line x1="348" y1="0" x2="348" y2="360" class="grid-line"/>
+    <line x1="464" y1="0" x2="464" y2="360" class="grid-line"/>
+    <line x1="580" y1="0" x2="580" y2="360" class="grid-line"/>
+    
+    <!-- Y-axis labels -->
+    <text x="-15" y="364" text-anchor="end" class="tick-label">1.0%</text>
+    <text x="-15" y="292" text-anchor="end" class="tick-label">2.0%</text>
+    <text x="-15" y="220" text-anchor="end" class="tick-label">3.0%</text>
+    <text x="-15" y="148" text-anchor="end" class="tick-label">4.0%</text>
+    <text x="-15" y="76" text-anchor="end" class="tick-label">5.0%</text>
+    
+    <!-- X-axis labels -->
+    <text x="0" y="385" text-anchor="middle" class="tick-label">20</text>
+    <text x="116" y="385" text-anchor="middle" class="tick-label">40</text>
+    <text x="232" y="385" text-anchor="middle" class="tick-label">60</text>
+    <text x="348" y="385" text-anchor="middle" class="tick-label">80</text>
+    <text x="464" y="385" text-anchor="middle" class="tick-label">120</text>
+    <text x="580" y="385" text-anchor="middle" class="tick-label">140</text>
+    
+    <!-- Y-axis title -->
+    <text transform="rotate(-90)" x="-180" y="-60" text-anchor="middle" class="axis-title">Pr(Reoperation)</text>
+    
+    <!-- X-axis title -->
+    <text x="290" y="430" text-anchor="middle" class="axis-title">Operative time (minutes)</text>
+    
+    <!-- Normal Weight line (solid dark) -->
+    <path d="M 0,345 L 116,338 L 232,324 L 348,306 L 464,280 L 580,268" 
+          fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Class I Obesity line (solid gray) -->
+    <path d="M 0,342 L 116,334 L 232,320 L 348,298 L 464,270 L 580,252" 
+          fill="none" stroke="#888888" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Class II Obesity line (dashed dark) -->
+    <path d="M 0,324 L 116,310 L 232,288 L 348,252 L 464,208 L 580,176" 
+          fill="none" stroke="#333333" stroke-width="3" stroke-linecap="round" stroke-dasharray="12,6"/>
+    
+    <!-- Class III Obesity line (dashed gray) -->
+    <path d="M 0,310 L 116,290 L 232,256 L 348,208 L 464,144 L 580,68" 
+          fill="none" stroke="#999999" stroke-width="3" stroke-linecap="round" stroke-dasharray="12,6"/>
+    
+    <!-- Legend -->
+    <g transform="translate(380, 30)">
+      <rect x="-10" y="-15" width="200" height="120" fill="white" fill-opacity="0.85" rx="6" stroke="#D5D9E0" stroke-width="1"/>
+      <text x="5" y="2" font-size="13" font-weight="600" fill="#0F1A2A">BMI Class</text>
+      
+      <line x1="5" y1="20" x2="35" y2="20" stroke="#1a1a1a" stroke-width="3"/>
+      <text x="42" y="25" class="legend-text">Normal Weight (Ref)</text>
+      
+      <line x1="5" y1="42" x2="35" y2="42" stroke="#888888" stroke-width="3"/>
+      <text x="42" y="47" class="legend-text">Class I Obesity</text>
+      
+      <line x1="5" y1="64" x2="35" y2="64" stroke="#333333" stroke-width="3" stroke-dasharray="8,4"/>
+      <text x="42" y="69" class="legend-text">Class II Obesity</text>
+      
+      <line x1="5" y1="86" x2="35" y2="86" stroke="#999999" stroke-width="3" stroke-dasharray="8,4"/>
+      <text x="42" y="91" class="legend-text">Class III Obesity</text>
+    </g>
+  </g>
+</svg>
