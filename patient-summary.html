@@ -14,10 +14,10 @@ body{font-family:'Inter',Arial,sans-serif;color:var(--t);font-size:11.5px;line-h
 .body{padding:11px 46px 0;flex:1;display:flex;flex-direction:column}
 .lead{font-size:12px;color:var(--ts);line-height:1.46;margin-bottom:9px;text-align:justify}
 .lead b{color:var(--t)}
-.nyt{display:flex;gap:16px;background:linear-gradient(135deg,#0F2B3C,#163448);color:#fff;border-radius:9px;padding:10px 20px;margin-bottom:10px;align-items:flex-start}
-.nyt .mk{font-family:'Playfair Display',serif;font-size:50px;line-height:0.7;color:var(--al);flex-shrink:0}
-.nyt .label{font-family:'Playfair Display',serif;font-size:13px;font-weight:700;margin-bottom:5px;color:var(--al)}
-.nyt p{font-size:12px;line-height:1.5;color:rgba(255,255,255,0.92);text-align:justify}
+.nyt{display:flex;gap:16px;background:#f4f6f8;border-radius:9px;padding:11px 26px;margin-bottom:10px;align-items:flex-start}
+.nyt .mk{font-family:'Playfair Display',serif;font-size:50px;line-height:0.7;color:var(--a);flex-shrink:0}
+.nyt .label{font-size:9.5px;text-transform:uppercase;letter-spacing:1.3px;font-weight:700;margin-bottom:6px;color:var(--a)}
+.nyt p{font-size:11.5px;line-height:1.55;color:var(--ts);text-align:justify}
 .stats{display:flex;justify-content:space-evenly;text-align:center;background:#f4f6f8;border-radius:8px;padding:10px 22px;margin-bottom:10px}
 .stats .s .n{font-family:'Playfair Display',serif;font-size:23px;font-weight:700;color:var(--a);line-height:1}
 .stats .s .l{font-size:8px;text-transform:uppercase;letter-spacing:0.6px;color:var(--ts);margin-top:5px;font-weight:600}
@@ -43,6 +43,8 @@ ul{list-style:none}
 .connect .c-s{font-size:11px;color:rgba(255,255,255,0.7);margin-top:4px}
 .connect .c-r{text-align:right;font-size:13px;line-height:1.7}
 .connect .c-r b{color:var(--al)}
+.connect .c-right{display:flex;align-items:center;gap:16px}
+.connect .da-badge{width:40px;height:40px;flex-shrink:0;border:1.5px solid rgba(255,255,255,0.4);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:18px;color:#fff;letter-spacing:0.5px}
 .connect .c-addr{text-align:center;font-size:9px;color:rgba(255,255,255,0.55);letter-spacing:0.4px;border-top:1px solid rgba(255,255,255,0.13);padding-top:7px}
 </style></head><body>
 <div class="head">
@@ -117,7 +119,10 @@ ul{list-style:none}
 <div class="connect">
   <div class="c-top">
     <div><div class="c-h">Schedule a Visit</div><div class="c-s">New appointments and second opinions welcome</div></div>
-    <div class="c-r"><b>Appointments:</b> (650) 723-5643<br><b>Online:</b> derekamanatullah.com</div>
+    <div class="c-right">
+      <div class="c-r"><b>Appointments:</b> (650) 723-5643<br><b>Online:</b> derekamanatullah.com</div>
+      <div class="da-badge">DA</div>
+    </div>
   </div>
   <div class="c-addr">Stanford University, Department of Orthopaedic Surgery &middot; 450 Broadway Street, Redwood City, CA &middot; derekamanatullah.com</div>
 </div>
